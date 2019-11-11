@@ -1,6 +1,6 @@
 var express = require('express');
 let data;
-var dbinfo = require('./passes');
+var dbinfo = require('../passes');
 const { Pool } = require('pg');
 const pool = new Pool(dbinfo);
 pool.query("SELECT * from users", (err, res) => {
