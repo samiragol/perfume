@@ -4,15 +4,15 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  const [value, setValue] = useState(null)
+  const [value, setValue] = useState(null);
   useEffect(()=>{
     axios.get('/user')
       .then(res => {
-        console.log(res.data.rows, "????")
+        console.log(res.data.rows, "????");
         setValue(res.data.rows)
       })
       .catch(err => console.log(err))
-      })
+      });
   return (
     <div className="App">
       <header className="App-header">
